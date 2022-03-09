@@ -13,7 +13,6 @@
 <style scoped>
   .recommend-com{
     width: 100%;
-    overflow: scroll;
     display: flex;
   }
 </style>

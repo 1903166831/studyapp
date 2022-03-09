@@ -1,5 +1,5 @@
 <template>
-  <nav-bar class="waeth-nav">
+  <nav-bar class="waeth-nav"  leftPath="/home" :isLeftToPage="true">
     <img class="back-icon" slot="item-left" src="~assets/img/personal_back_icon.png" alt="">
     <div class="choose-area" slot="item-center">
       <div class="nav-area">
@@ -34,6 +34,7 @@
     left: 0;
     bottom: 0;
     margin: auto;
+    /* z-index: 6; */
   }
 
   .choose-area{

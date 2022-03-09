@@ -3,6 +3,18 @@
     <mycour-list-com>
       <set-list class="login-list">
         <img slot="icon" src="~assets/img/login_phone_icon.png" alt="">
+        <input slot="text" type="text" placeholder="请输入用户名">
+      </set-list>
+    </mycour-list-com>
+    <mycour-list-com>
+      <set-list class="login-list">
+        <img slot="icon" src="~assets/img/login_phone_icon.png" alt="">
+        <input slot="text" type="text" placeholder="请输入邮箱">
+      </set-list>
+    </mycour-list-com>
+    <mycour-list-com>
+      <set-list class="login-list">
+        <img slot="icon" src="~assets/img/login_phone_icon.png" alt="">
         <input slot="text" type="text" placeholder="请输入手机号">
       </set-list>
     </mycour-list-com>
@@ -12,9 +24,12 @@
         <input slot="text" type="password" placeholder="请输入密码">
       </set-list>
     </mycour-list-com>
-    <div class="forget">
-      <p>忘记密码</p>
-    </div>
+    <mycour-list-com>
+      <set-list class="login-list">
+        <img slot="icon" src="~assets/img/login_lock_icon.png" alt="">
+        <input slot="text" type="password" placeholder="请再次输入密码">
+      </set-list>
+    </mycour-list-com>
   </div>
 </template>
 

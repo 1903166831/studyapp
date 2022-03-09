@@ -1,5 +1,5 @@
-// const { defineConfig } = require('@vue/cli-service')
-module.exports = {
+const { defineConfig } = require('@vue/cli-service')
+module.exports = defineConfig({
   configureWebpack: {
     resolve: {
       alias: {
@@ -9,6 +9,10 @@ module.exports = {
         'network': '@/network',
         'views': '@/views',
       }
+    },
+    externals: {
+      // 包名:全局变量
+      "BMap": "BMap"
     }
-  }
-}
+  },
+})

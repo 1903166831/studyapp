@@ -1,12 +1,18 @@
 <template>
   <div class="submit">
-    <p>提交</p>
+    <p>{{text}}</p>
   </div>
 </template>
 
 <script>
   export default {
-    name: "CommentSubmit"
+    name: "CommentSubmit",
+    props: {
+      text: {
+        type: String,
+        default: '提交'
+      }
+    }
   }
 </script>
 

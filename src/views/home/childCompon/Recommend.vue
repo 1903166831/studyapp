@@ -3,9 +3,26 @@
     <nav-bar class="recommend-title">
       <p slot="item-left">推荐讲师</p>
     </nav-bar>
-    <recommend-com class="recom-com">
-      <recommend-item class="recom-item" path="/recommend" v-for="(item, index) in recommendCount" :key="index"/>
-    </recommend-com>
+    <!-- <recommend-com class="recom-com"> -->
+    <swiper ref="mySwiper" :options="swiperOptions">
+      <swiper-slide>
+        <img src="~assets/img/recommend_poster1.png" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="~assets/img/recommend_poster1.png" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="~assets/img/recommend_poster1.png" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="~assets/img/recommend_poster1.png" alt="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="~assets/img/recommend_poster1.png" alt="">
+      </swiper-slide>
+      <!-- <div class="swiper-pagination" slot="pagination"></div> -->
+    </swiper>
+    <!-- </recommend-com> -->
   </div>
 </template>
 
@@ -14,17 +31,41 @@
   import RecommendCom from 'components/content/recommend/RecommendCom'
   import RecommendItem from 'components/content/recommend/RecommendItem'
 
+  import { Swiper, SwiperSlide, directive } from 'vue-awesome-swiper'
+
+  import 'swiper/css/swiper.css'
+
+
+  
+
   export default {
     name: "Recommend",
     data() {
       return {
-        recommendCount: 5
+        recommendCount: 5,
+        swiperOptions: {
+          pagination: {
+            el: '.swiper-pagination'
+          },
+          loop: true
+          // Some Swiper option/callback...
+        }
       }
     },
     components: {
       NavBar,
       RecommendCom,
       RecommendItem,
+      Swiper,
+      SwiperSlide
+    },
+    directives: {
+      // swiper: directive
+    },
+    computed: {
+      // swiper() {
+      //   return this.$refs.mySwiper.$swiper
+      // }
     }
   }
 </script>

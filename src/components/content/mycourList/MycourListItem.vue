@@ -33,7 +33,7 @@
     methods: {
       mycourItemClick() {
         this.$store.commit('editCourId', this.courseId)
-        this.$router.push("/study")
+        this.$router.push("/study/" + this.courseId)
         // console.log(this.courseId);
       }
     }

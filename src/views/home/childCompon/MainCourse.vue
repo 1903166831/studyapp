@@ -6,7 +6,7 @@
       </template>
     </nav-bar>
     <div class="course-list">
-      <course-list-item class="course-item" v-for="item in newData" :key="item.id" :itemData="item">
+      <course-list-item class="course-item" v-for="item in newData" :courseId="item.ID" :key="item.id" :itemData="item">
         <course-item-title class="item-title">
           <template v-slot:item-name>
             <p class="item-name">{{item.Cname}}</p>

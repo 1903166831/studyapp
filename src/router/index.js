@@ -11,6 +11,7 @@ const Study = () => import('views/study/Study')
 const SetPage = () => import('views/set/Set')
 const CommentPage = () => import('views/comment/Comment')
 const Login = () => import('views/login/Login')
+const Regist = () => import('views/regist/Regist')
 
 Vue.use(VueRouter)
 
@@ -85,6 +86,13 @@ const routes = [
   {
     path: '/login',
     component: Login,
+    meta: {
+      isTabBarShow: false
+    }
+  },
+  {
+    path: '/regist',
+    component: Regist,
     meta: {
       isTabBarShow: false
     }

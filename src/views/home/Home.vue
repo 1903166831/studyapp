@@ -18,6 +18,7 @@
   import Guess from './childCompon/Guess.vue'
 
   import { getNewCourse } from 'network/home'
+  
 
   export default {
     name: "Home",
@@ -44,7 +45,7 @@
           this.newData = res.data.newList
           this.guessData = res.data.bannerList
         })
-      }
+      },
     }
   }
 </script>
